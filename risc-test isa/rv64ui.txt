@@ -1,0 +1,102 @@
+/root/riscv-tests/isa/rv64ui/Newadd.elf
+/root/riscv-tests/isa/rv64ui/Newaddi.elf
+/root/riscv-tests/isa/rv64ui/Newaddiw.elf
+/root/riscv-tests/isa/rv64ui/Newaddw.elf
+/root/riscv-tests/isa/rv64ui/Newand.elf
+/root/riscv-tests/isa/rv64ui/Newandi.elf
+/root/riscv-tests/isa/rv64ui/Newauipc.elf
+/root/riscv-tests/isa/rv64ui/Newbeq.elf
+/root/riscv-tests/isa/rv64ui/Newbge.elf
+/root/riscv-tests/isa/rv64ui/Newbgeu.elf
+/root/riscv-tests/isa/rv64ui/Newblt.elf
+/root/riscv-tests/isa/rv64ui/Newbltu.elf
+/root/riscv-tests/isa/rv64ui/Newbne.elf
+/root/riscv-tests/isa/rv64ui/Newjal.elf
+/root/riscv-tests/isa/rv64ui/Newjalr.elf
+/root/riscv-tests/isa/rv64ui/Newlb.elf
+/root/riscv-tests/isa/rv64ui/Newlbu.elf
+/root/riscv-tests/isa/rv64ui/Newld.elf
+/root/riscv-tests/isa/rv64ui/Newlh.elf
+/root/riscv-tests/isa/rv64ui/Newlhu.elf
+/root/riscv-tests/isa/rv64ui/Newlui.elf
+/root/riscv-tests/isa/rv64ui/Newlw.elf
+/root/riscv-tests/isa/rv64ui/Newlwu.elf
+/root/riscv-tests/isa/rv64ui/Newma_data.elf
+*** FAILED *** (tohost = 668)
+/root/riscv-tests/isa/rv64ui/Newor.elf
+/root/riscv-tests/isa/rv64ui/Newori.elf
+/root/riscv-tests/isa/rv64ui/Newsb.elf
+/root/riscv-tests/isa/rv64ui/Newsd.elf
+/root/riscv-tests/isa/rv64ui/Newsh.elf
+/root/riscv-tests/isa/rv64ui/Newsimple.elf
+/root/riscv-tests/isa/rv64ui/Newsll.elf
+/root/riscv-tests/isa/rv64ui/Newslli.elf
+/root/riscv-tests/isa/rv64ui/Newslliw.elf
+/root/riscv-tests/isa/rv64ui/Newsllw.elf
+/root/riscv-tests/isa/rv64ui/Newslt.elf
+/root/riscv-tests/isa/rv64ui/Newslti.elf
+/root/riscv-tests/isa/rv64ui/Newsltiu.elf
+/root/riscv-tests/isa/rv64ui/Newsltu.elf
+/root/riscv-tests/isa/rv64ui/Newsra.elf
+/root/riscv-tests/isa/rv64ui/Newsrai.elf
+/root/riscv-tests/isa/rv64ui/Newsraiw.elf
+/root/riscv-tests/isa/rv64ui/Newsraw.elf
+/root/riscv-tests/isa/rv64ui/Newsrl.elf
+/root/riscv-tests/isa/rv64ui/Newsrli.elf
+/root/riscv-tests/isa/rv64ui/Newsrliw.elf
+/root/riscv-tests/isa/rv64ui/Newsrlw.elf
+/root/riscv-tests/isa/rv64ui/Newsub.elf
+/root/riscv-tests/isa/rv64ui/Newsubw.elf
+/root/riscv-tests/isa/rv64ui/Newsw.elf
+/root/riscv-tests/isa/rv64ui/Newxor.elf
+/root/riscv-tests/isa/rv64ui/Newxori.elf
+Assembly complete.
+
+real    0m2.374s
+user    0m1.507s
+sys     0m0.972s
+
+
+
+#!/bin/bash
+
+# 赋值目录到变量 DIR
+#DIR=/root/riscv-tests/isa/rv64ui
+
+
+#DIR=/root/riscv-tests/isa/rv32mi
+DIR=/root/riscv-tests/isa/rv64mi
+#DIR=/root/riscv-tests/isa/rv32uc
+#DIR=/root/riscv-tests/isa/rv32ui
+
+# 检查目录是否存在
+if [ ! -d "$DIR" ]; then
+    echo "Directory does not exist: $DIR"
+    exit 1
+fi
+
+#遍历目录中的所有 .s 文件
+for file in "$DIR"/*.S; do
+    # 获取没有扩展名的文件名
+    filename=$(basename -- "$file")
+    filename="${filename%.*}"
+    newfilename="New${filename}"
+
+    gcc -E -D__riscv_xlen=64 -o "$DIR"/"$newfilename".S -I/root/riscv-tests/env/ -I/root/riscv-tests/isa/macros/scalar -I/root/riscv-tests/env/p "$file"
+     #使用 riscv32-unknown-elf-as 編譯每個檔案
+       ./riscv32-unknown-elf-as -march=rv64imc_zicsr -I/root/riscv-tests/env/ -I/root/riscv-tests/isa/macros/scalar -I/root/riscv-tests/env/p -o "$DIR"/"$newfilename".o "$DIR"/"$newfilename".S
+      riscv64-unknown-elf-ld -T/root/riscv-tests/env/p/link.ld -e _start -o "$DIR"/"$newfilename.elf" "$DIR"/"$newfilename".o
+     echo "Compiled $file to "$DIR"/"$newfilename".S"
+done
+
+for file in "$DIR"/*.elf; do
+    #获取没有扩展名的文件名
+    filename=$(basename -- "$file")
+    filename="${filename%.*}"
+    newfilename="New${filename}"
+
+     echo "$file"
+     /root/riscv-gnu-toolchain/spike/build/spike --isa=RV64imc_zicsr "$file" | tee rv64ui.txt
+done
+
+echo "Assembly complete."

@@ -1,0 +1,12 @@
+/root/riscv-tests/isa/rv32uzba/Newsh1add.elf
+/root/riscv-tests/isa/rv32uzba/Newsh2add.elf
+/root/riscv-tests/isa/rv32uzba/Newsh3add.elf
+Assembly complete.
+
+real    0m0.051s
+user    0m0.037s
+sys     0m0.022s
+
+
+   ./riscv32-unknown-elf-as -march=rv32gc_zba -I/root/riscv-tests/env/ -I/root/riscv-tests/isa/macros/scalar -I/root/riscv-tests/env/p -o "$DIR"/"$newfilename".o "$DIR"/"$newfilename".S
+ /root/riscv-gnu-toolchain/spike/build/spike --isa=RV32imc_zba "$file" | tee rv32uzbb.txt

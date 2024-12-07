@@ -1,0 +1,20 @@
+root@2466d0265375:~/riscv-tests/isa# time sh riscv-test.sh
+/root/riscv-tests/isa/rv32ua/NewNewlrsc.elf
+/root/riscv-tests/isa/rv32ua/Newamoadd_w.elf
+/root/riscv-tests/isa/rv32ua/Newamoand_w.elf
+/root/riscv-tests/isa/rv32ua/Newamomax_w.elf
+/root/riscv-tests/isa/rv32ua/Newamomaxu_w.elf
+/root/riscv-tests/isa/rv32ua/Newamomin_w.elf
+/root/riscv-tests/isa/rv32ua/Newamominu_w.elf
+/root/riscv-tests/isa/rv32ua/Newamoor_w.elf
+/root/riscv-tests/isa/rv32ua/Newamoswap_w.elf
+/root/riscv-tests/isa/rv32ua/Newamoxor_w.elf
+/root/riscv-tests/isa/rv32ua/Newlrsc.elf
+Assembly complete.
+
+real    0m0.549s
+user    0m0.354s
+sys     0m0.284s
+
+    ./riscv32-unknown-elf-as -march=rv32gc -I/root/riscv-tests/env/ -I/root/riscv-tests/isa/macros/scalar -I/root/riscv-tests/env/p -o "$DIR"/"$newfilename".o "$DIR"/"$newfilename".S
+/root/riscv-gnu-toolchain/spike/build/spike --isa=RV32IAC "$file" | tee rv32ua.txt

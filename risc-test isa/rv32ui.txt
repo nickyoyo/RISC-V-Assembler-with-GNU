@@ -1,0 +1,90 @@
+/root/riscv-tests/isa/rv32ui/NewNewadd.elf
+/root/riscv-tests/isa/rv32ui/NewNewaddi.elf
+/root/riscv-tests/isa/rv32ui/NewNewand.elf
+/root/riscv-tests/isa/rv32ui/NewNewandi.elf
+/root/riscv-tests/isa/rv32ui/NewNewauipc.elf
+/root/riscv-tests/isa/rv32ui/NewNewbeq.elf
+/root/riscv-tests/isa/rv32ui/NewNewbge.elf
+/root/riscv-tests/isa/rv32ui/NewNewbgeu.elf
+/root/riscv-tests/isa/rv32ui/NewNewblt.elf
+/root/riscv-tests/isa/rv32ui/NewNewbltu.elf
+/root/riscv-tests/isa/rv32ui/NewNewbne.elf
+/root/riscv-tests/isa/rv32ui/NewNewfence_i.elf
+/root/riscv-tests/isa/rv32ui/NewNewjal.elf
+/root/riscv-tests/isa/rv32ui/NewNewjalr.elf
+/root/riscv-tests/isa/rv32ui/NewNewlb.elf
+/root/riscv-tests/isa/rv32ui/NewNewlbu.elf
+/root/riscv-tests/isa/rv32ui/NewNewlh.elf
+/root/riscv-tests/isa/rv32ui/NewNewlhu.elf
+/root/riscv-tests/isa/rv32ui/NewNewlui.elf
+/root/riscv-tests/isa/rv32ui/NewNewlw.elf
+/root/riscv-tests/isa/rv32ui/NewNewma_data.elf
+*** FAILED *** (tohost = 668)
+/root/riscv-tests/isa/rv32ui/NewNewor.elf
+/root/riscv-tests/isa/rv32ui/NewNewori.elf
+/root/riscv-tests/isa/rv32ui/NewNewsb.elf
+/root/riscv-tests/isa/rv32ui/NewNewsh.elf
+/root/riscv-tests/isa/rv32ui/NewNewsimple.elf
+/root/riscv-tests/isa/rv32ui/NewNewsll.elf
+/root/riscv-tests/isa/rv32ui/NewNewslli.elf
+/root/riscv-tests/isa/rv32ui/NewNewslt.elf
+/root/riscv-tests/isa/rv32ui/NewNewslti.elf
+/root/riscv-tests/isa/rv32ui/NewNewsltiu.elf
+/root/riscv-tests/isa/rv32ui/NewNewsltu.elf
+/root/riscv-tests/isa/rv32ui/NewNewsra.elf
+/root/riscv-tests/isa/rv32ui/NewNewsrai.elf
+/root/riscv-tests/isa/rv32ui/NewNewsrl.elf
+/root/riscv-tests/isa/rv32ui/NewNewsrli.elf
+/root/riscv-tests/isa/rv32ui/NewNewsub.elf
+/root/riscv-tests/isa/rv32ui/NewNewsw.elf
+/root/riscv-tests/isa/rv32ui/NewNewxor.elf
+/root/riscv-tests/isa/rv32ui/NewNewxori.elf
+/root/riscv-tests/isa/rv32ui/Newadd.elf
+/root/riscv-tests/isa/rv32ui/Newaddi.elf
+/root/riscv-tests/isa/rv32ui/Newand.elf
+/root/riscv-tests/isa/rv32ui/Newandi.elf
+/root/riscv-tests/isa/rv32ui/Newauipc.elf
+/root/riscv-tests/isa/rv32ui/Newbeq.elf
+/root/riscv-tests/isa/rv32ui/Newbge.elf
+/root/riscv-tests/isa/rv32ui/Newbgeu.elf
+/root/riscv-tests/isa/rv32ui/Newblt.elf
+/root/riscv-tests/isa/rv32ui/Newbltu.elf
+/root/riscv-tests/isa/rv32ui/Newbne.elf
+/root/riscv-tests/isa/rv32ui/Newfence_i.elf
+/root/riscv-tests/isa/rv32ui/Newjal.elf
+/root/riscv-tests/isa/rv32ui/Newjalr.elf
+/root/riscv-tests/isa/rv32ui/Newlb.elf
+/root/riscv-tests/isa/rv32ui/Newlbu.elf
+/root/riscv-tests/isa/rv32ui/Newlh.elf
+/root/riscv-tests/isa/rv32ui/Newlhu.elf
+/root/riscv-tests/isa/rv32ui/Newlui.elf
+/root/riscv-tests/isa/rv32ui/Newlw.elf
+/root/riscv-tests/isa/rv32ui/Newma_data.elf
+*** FAILED *** (tohost = 668)
+/root/riscv-tests/isa/rv32ui/Newor.elf
+/root/riscv-tests/isa/rv32ui/Newori.elf
+/root/riscv-tests/isa/rv32ui/Newsb.elf
+/root/riscv-tests/isa/rv32ui/Newsh.elf
+/root/riscv-tests/isa/rv32ui/Newsimple.elf
+/root/riscv-tests/isa/rv32ui/Newsll.elf
+/root/riscv-tests/isa/rv32ui/Newslli.elf
+/root/riscv-tests/isa/rv32ui/Newslt.elf
+/root/riscv-tests/isa/rv32ui/Newslti.elf
+/root/riscv-tests/isa/rv32ui/Newsltiu.elf
+/root/riscv-tests/isa/rv32ui/Newsltu.elf
+/root/riscv-tests/isa/rv32ui/Newsra.elf
+/root/riscv-tests/isa/rv32ui/Newsrai.elf
+/root/riscv-tests/isa/rv32ui/Newsrl.elf
+/root/riscv-tests/isa/rv32ui/Newsrli.elf
+/root/riscv-tests/isa/rv32ui/Newsub.elf
+/root/riscv-tests/isa/rv32ui/Newsw.elf
+/root/riscv-tests/isa/rv32ui/Newxor.elf
+/root/riscv-tests/isa/rv32ui/Newxori.elf
+Assembly complete.
+
+real    0m1.111s
+user    0m0.740s
+sys     0m0.569s
+
+    ./riscv32-unknown-elf-as -march=rv32gc -I/root/riscv-tests/env/ -I/root/riscv-tests/isa/macros/scalar -I/root/riscv-tests/env/p -o "$DIR"/"$newfilename".o "$DIR"/"$newfilename".S
+ /root/riscv-gnu-toolchain/spike/build/spike --isa=RV32imc "$file" | tee rv32ua.txt

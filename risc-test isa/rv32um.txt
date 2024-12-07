@@ -1,0 +1,16 @@
+/root/riscv-tests/isa/rv32um/Newdiv.elf
+/root/riscv-tests/isa/rv32um/Newdivu.elf
+/root/riscv-tests/isa/rv32um/Newmul.elf
+/root/riscv-tests/isa/rv32um/Newmulh.elf
+/root/riscv-tests/isa/rv32um/Newmulhsu.elf
+/root/riscv-tests/isa/rv32um/Newmulhu.elf
+/root/riscv-tests/isa/rv32um/Newrem.elf
+/root/riscv-tests/isa/rv32um/Newremu.elf
+Assembly complete.
+
+real    0m0.108s
+user    0m0.055s
+sys     0m0.073s
+
+    ./riscv32-unknown-elf-as -march=rv32gc -I/root/riscv-tests/env/ -I/root/riscv-tests/isa/macros/scalar -I/root/riscv-tests/env/p -o "$DIR"/"$newfilename".o "$DIR"/"$newfilename".S
+  /root/riscv-gnu-toolchain/spike/build/spike --isa=RV32imc "$file

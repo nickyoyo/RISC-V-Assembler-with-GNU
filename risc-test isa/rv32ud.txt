@@ -1,0 +1,18 @@
+/root/riscv-tests/isa/rv32ud/Newfadd.elf
+/root/riscv-tests/isa/rv32ud/Newfclass.elf
+/root/riscv-tests/isa/rv32ud/Newfcmp.elf
+/root/riscv-tests/isa/rv32ud/Newfcvt.elf
+/root/riscv-tests/isa/rv32ud/Newfcvt_w.elf
+/root/riscv-tests/isa/rv32ud/Newfdiv.elf
+/root/riscv-tests/isa/rv32ud/Newfmadd.elf
+/root/riscv-tests/isa/rv32ud/Newfmin.elf
+/root/riscv-tests/isa/rv32ud/Newldst.elf
+/root/riscv-tests/isa/rv32ud/Newrecoding.elf
+Assembly complete.
+
+real    0m0.310s
+user    0m0.064s
+sys     0m0.104s
+
+    ./riscv32-unknown-elf-as -march=rv32gc -I/root/riscv-tests/env/ -I/root/riscv-tests/isa/macros/scalar -I/root/riscv-tests/env/p -o "$DIR"/"$newfilename".o "$DIR"/"$newfilename".S
+/root/riscv-gnu-toolchain/spike/build/spike --isa=RV32gc "$file"

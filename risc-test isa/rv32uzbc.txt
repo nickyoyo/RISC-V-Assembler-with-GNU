@@ -1,0 +1,8 @@
+/root/riscv-tests/isa/rv32uzbc/Newclmul.elf
+/root/riscv-tests/isa/rv32uzbc/Newclmulh.elf
+/root/riscv-tests/isa/rv32uzbc/Newclmulr.elf
+Assembly complete.
+
+real    0m0.144s
+user    0m0.085s
+sys     0m0.062s
